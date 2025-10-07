@@ -117,7 +117,7 @@ export function AppSidebar() {
   const currentItem = pathname?.split('/').pop() || ""
 
   return (
-    <Sidebar collapsible="none">
+    <Sidebar collapsible="none" className="border-r border-[#1B1B1D]">
       <SidebarHeader>
         <div className="flex items-center gap-2 px-4 py-4">
           <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'GT Walsheim', sans-serif" }}>
@@ -125,7 +125,7 @@ export function AppSidebar() {
           </h1>
         </div>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent className="[&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {sections.map((section) => (
           <SidebarGroup key={section.title}>
             <SidebarGroupLabel className="px-4 text-sm font-medium opacity-40" style={{ fontFamily: "'GT Walsheim', sans-serif" }}>{section.title}</SidebarGroupLabel>

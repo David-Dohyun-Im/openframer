@@ -56,7 +56,7 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
   const PreviewComponent = componentMap[id];
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-8 px-4 py-6 text-foreground md:px-0 lg:py-8">
+    <div className="mx-auto flex w-full max-w-6xl min-w-0 flex-1 flex-col gap-8 px-4 py-6 text-foreground md:px-8 lg:py-8">
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-2">
           <nav aria-label="Breadcrumb" className="text-muted-foreground">
@@ -93,7 +93,18 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
       
       <div className="w-full flex-1">
         <div className="relative mt-4 mb-12 flex flex-col gap-2">
-          <div className="text-sm font-medium mb-2">Preview</div>
+          <div className="flex items-center justify-between mb-2">
+            <div className="text-sm font-medium">Preview</div>
+            <a
+              href={`/preview/${id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            >
+              <span>전체보기</span>
+              <span>🔍</span>
+            </a>
+          </div>
           <div className="relative rounded-lg border overflow-hidden">
             {PreviewComponent ? (
               <div className="w-full">
