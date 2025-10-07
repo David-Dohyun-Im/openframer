@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { usePathname } from "next/navigation"
 import { 
   Sparkles, 
   Building2, 
@@ -111,10 +111,13 @@ const sections = [
 ]
 
 export function AppSidebar() {
-  const [activeItem, setActiveItem] = useState<string>("hero1")
+  const pathname = usePathname()
+  
+  // Extract the current item from the pathname (e.g., "/components/hero1" -> "hero1")
+  const currentItem = pathname?.split('/').pop() || ""
 
   return (
-    <Sidebar>
+    <Sidebar collapsible="none">
       <SidebarHeader>
         <div className="flex items-center gap-2 px-4 py-4">
           <h1 className="text-2xl font-bold tracking-tight" style={{ fontFamily: "'GT Walsheim', sans-serif" }}>
@@ -128,23 +131,25 @@ export function AppSidebar() {
             <SidebarGroupLabel className="px-4 text-sm font-medium opacity-40" style={{ fontFamily: "'GT Walsheim', sans-serif" }}>{section.title}</SidebarGroupLabel>
             <SidebarGroupContent>
               <SidebarMenu>
-                {section.items.map((item) => (
-                  <SidebarMenuItem key={item}>
-                    <SidebarMenuButton 
-                      asChild 
-                      isActive={activeItem === item}
-                      className="px-4 py-2"
-                    >
-                      <a 
-                        href={`#${item}`}
-                        onClick={() => setActiveItem(item)}
-                        className={activeItem === item ? "text-foreground" : "text-muted-foreground hover:text-foreground"}
+                {section.items.map((item) => {
+                  const isActive = currentItem === item
+                  return (
+                    <SidebarMenuItem key={item}>
+                      <SidebarMenuButton 
+                        asChild 
+                        isActive={isActive}
+                        className="px-4 py-2"
                       >
-                        <span className="text-sm">{item}</span>
-                      </a>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                ))}
+                        <a 
+                          href={`/components/${item}`}
+                          className={isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground"}
+                        >
+                          <span className="text-sm">{item}</span>
+                        </a>
+                      </SidebarMenuButton>
+                    </SidebarMenuItem>
+                  )
+                })}
               </SidebarMenu>
             </SidebarGroupContent>
           </SidebarGroup>
