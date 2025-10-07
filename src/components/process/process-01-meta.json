@@ -1,0 +1,41 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#0066FF", "#6366F1", "#8B5CF6", "#EC4899"],
+    "secondary": ["#64748B", "#94A3B8"],
+    "modes": {
+      "light": {
+        "background": "#F8FAFC",
+        "text": "#0F172A",
+        "accent": "#FFFFFF"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#020617"
+      }
+    }
+  },
+  "font": {
+    "heading": ["GT Walsheim Bold", "Inter Bold", "System Bold"],
+    "subheading": ["GT Walsheim Medium", "Inter Medium"],
+    "body": ["GT Walsheim Regular", "Inter Regular"]
+  },
+  "motion": "Smooth entrance animations with step-by-step reveal. Hover states should be subtle. Consider progressive disclosure for engagement.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "28px", "max": "72px" },
+      "subheading": { "min": "18px", "max": "24px" },
+      "body": { "min": "14px", "max": "16px" }
+    },
+    "dimensions": {
+      "height": { "min": "400px", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1280px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "96px" },
+      "gap": { "min": "16px", "max": "32px" }
+    }
+  }
+}
+

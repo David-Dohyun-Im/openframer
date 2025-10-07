@@ -1,0 +1,41 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#0066FF", "#6366F1", "#8B5CF6", "#EC4899"],
+    "secondary": ["#64748B", "#94A3B8"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#0F172A",
+        "accent": "#F1F5F9"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#1E293B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["GT Walsheim Bold", "Inter Bold", "System Bold"],
+    "subheading": ["GT Walsheim Medium", "Inter Medium"],
+    "body": ["GT Walsheim Regular", "Inter Regular"]
+  },
+  "motion": "Sequential reveal with connecting line animation. Steps should cascade in from left. Timeline feel with smooth transitions.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "24px", "max": "48px" },
+      "subheading": { "min": "20px", "max": "32px" },
+      "body": { "min": "16px", "max": "20px" }
+    },
+    "dimensions": {
+      "height": { "min": "400px", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1024px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "96px" },
+      "gap": { "min": "24px", "max": "48px" }
+    }
+  }
+}
+
