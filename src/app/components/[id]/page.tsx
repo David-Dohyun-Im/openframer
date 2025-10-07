@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic';
+import { promises as fs } from 'fs';
+import path from 'path';
 
 // 컴포넌트 매핑
 const componentMap: Record<string, any> = {
@@ -54,6 +56,16 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
   
   // 해당 id의 컴포넌트 가져오기
   const PreviewComponent = componentMap[id];
+  
+  // Meta data 가져오기
+  let metadata = null;
+  try {
+    const metaFilePath = path.join(process.cwd(), 'src', 'components', id.split('-')[0], `${id}-meta.json`);
+    const metaFileContent = await fs.readFile(metaFilePath, 'utf-8');
+    metadata = JSON.parse(metaFileContent);
+  } catch (error) {
+    console.error('Meta file not found:', error);
+  }
 
   return (
     <div className="mx-auto flex w-full max-w-6xl min-w-0 flex-1 flex-col gap-8 px-4 py-6 text-foreground md:px-8 lg:py-8">
@@ -99,10 +111,14 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
               href={`/preview/${id}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-md bg-slate-100 dark:bg-slate-800 px-3 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+              className="flex items-center gap-2 rounded-md px-2 py-2 hover:opacity-80 transition-opacity"
             >
-              <span>전체보기</span>
-              <span>🔍</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+                <path d="M21 8V5a2 2 0 0 0-2-2h-3"></path>
+                <path d="M3 16v3a2 2 0 0 0 2 2h3"></path>
+                <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+              </svg>
             </a>
           </div>
           <div className="relative rounded-lg border overflow-hidden">
@@ -128,7 +144,7 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
         </h2>
         
         <div className="relative mt-4">
-          <pre className="rounded-lg border border-white/10 bg-[#0d1117] p-4 overflow-x-auto">
+          <pre className="rounded-lg bg-[#111111] p-4 overflow-x-auto">
             <code className="text-sm font-mono text-gray-300">
               <span className="text-pink-400">npm</span>
               <span className="text-gray-300"> install </span>
@@ -142,7 +158,7 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
         </h2>
         
         <div className="relative mt-4">
-          <pre className="rounded-lg border border-white/10 bg-[#0d1117] p-4 overflow-x-auto">
+          <pre className="rounded-lg bg-[#111111] p-4 overflow-x-auto">
             <code className="text-sm font-mono">
               <span className="text-pink-400">import</span>
               <span className="text-gray-300"> {'{ '}</span>
@@ -155,13 +171,15 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
         </div>
 
         <h2 className="font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight">
-          Examples
+          Meta Data
         </h2>
         
-        <div className="relative mt-4 rounded-lg border p-8">
-          <div className="text-center text-muted-foreground">
-            Example section for {id}
-          </div>
+        <div className="relative mt-4">
+          <pre className="rounded-lg bg-[#111111] p-4 max-h-[500px] overflow-y-auto overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:'none'] [scrollbar-width:'none']">
+            <code className="text-sm font-mono text-gray-300">
+              {metadata ? JSON.stringify(metadata, null, 2) : 'Meta data not available'}
+            </code>
+          </pre>
         </div>
 
         <h2 className="font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight">

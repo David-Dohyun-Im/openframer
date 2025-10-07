@@ -1,0 +1,40 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#0066FF", "#6366F1", "#8B5CF6", "#EC4899"],
+    "secondary": ["#64748B", "#94A3B8"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#0F172A",
+        "accent": "#F1F5F9"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#1E293B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["GT Walsheim Bold", "Inter Bold", "System Bold"],
+    "subheading": ["GT Walsheim Medium", "Inter Medium"],
+    "body": ["GT Walsheim Regular", "Inter Regular"]
+  },
+  "motion": "Smooth entrance animations with subtle transitions. Hover states should be clear and inviting. Consider scroll-triggered animations for engagement.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "28px", "max": "72px" },
+      "subheading": { "min": "18px", "max": "24px" },
+      "body": { "min": "14px", "max": "18px" }
+    },
+    "dimensions": {
+      "height": { "min": "400px", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1280px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "96px" },
+      "gap": { "min": "16px", "max": "48px" }
+    }
+  }
+}
