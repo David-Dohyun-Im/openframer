@@ -36,77 +36,77 @@ const sections = [
   {
     title: "Hero Section",
     icon: Sparkles,
-    items: ["hero1", "hero2", "hero3"],
+    items: ["hero-01", "hero-02", "hero-03"],
   },
   {
     title: "Logo Cloud",
     icon: Building2,
-    items: ["logo-cloud1", "logo-cloud2", "logo-cloud3"],
+    items: ["logocloud-01", "logocloud-02", "logocloud-03"],
   },
   {
     title: "Features",
     icon: Layers,
-    items: ["features1", "features2", "features3"],
+    items: ["features-01", "features-02", "features-03"],
   },
   {
     title: "Integrations",
     icon: Puzzle,
-    items: ["integrations1", "integrations2", "integrations3"],
+    items: ["integrations-01", "integrations-02", "integrations-03"],
   },
   {
     title: "Content",
     icon: FileText,
-    items: ["content1", "content2", "content3"],
+    items: ["content-01", "content-02", "content-03"],
   },
   {
     title: "Stats",
     icon: BarChart3,
-    items: ["stats1", "stats2", "stats3"],
+    items: ["stats-01", "stats-02", "stats-03"],
   },
   {
     title: "Team",
     icon: Users,
-    items: ["team1", "team2", "team3"],
+    items: ["team-01", "team-02", "team-03"],
   },
   {
     title: "Testimonials",
     icon: MessageSquare,
-    items: ["testimonials1", "testimonials2", "testimonials3"],
+    items: ["testimonials-01", "testimonials-02", "testimonials-03"],
   },
   {
     title: "Call to Action",
     icon: Megaphone,
-    items: ["cta1", "cta2", "cta3"],
+    items: ["cta-01", "cta-02", "cta-03"],
   },
   {
     title: "Footer",
     icon: Layout,
-    items: ["footer1", "footer2", "footer3"],
+    items: ["footer-01", "footer-02", "footer-03"],
   },
   {
     title: "Pricing",
     icon: DollarSign,
-    items: ["pricing1", "pricing2", "pricing3"],
+    items: ["pricing-01", "pricing-02", "pricing-03"],
   },
   {
     title: "Comparator",
     icon: Scale,
-    items: ["comparator1", "comparator2", "comparator3"],
+    items: ["comparator-01", "comparator-02", "comparator-03"],
   },
   {
     title: "FAQs",
     icon: HelpCircle,
-    items: ["faqs1", "faqs2", "faqs3"],
+    items: ["faqs-01", "faqs-02", "faqs-03"],
   },
   {
     title: "Login",
     icon: LogIn,
-    items: ["login1", "login2", "login3"],
+    items: ["login-01", "login-02", "login-03"],
   },
   {
     title: "Sign Up",
     icon: UserPlus,
-    items: ["signup1", "signup2", "signup3"],
+    items: ["signup-01", "signup-02", "signup-03"],
   },
 ]
 

@@ -1,5 +1,23 @@
+import dynamic from 'next/dynamic';
+
+// 컴포넌트 매핑
+const componentMap: Record<string, any> = {
+  'hero-01': dynamic(() => import('@/components/hero/hero-01')),
+  'hero-02': dynamic(() => import('@/components/hero/hero-02')),
+  'hero-03': dynamic(() => import('@/components/hero/hero-03')),
+  'logocloud-01': dynamic(() => import('@/components/logocloud/logocloud-01')),
+  'logocloud-02': dynamic(() => import('@/components/logocloud/logocloud-02')),
+  'logocloud-03': dynamic(() => import('@/components/logocloud/logocloud-03')),
+  'cta-01': dynamic(() => import('@/components/cta/cta-01')),
+  'cta-02': dynamic(() => import('@/components/cta/cta-02')),
+  'cta-03': dynamic(() => import('@/components/cta/cta-03')),
+};
+
 export default async function ComponentPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
+  
+  // 해당 id의 컴포넌트 가져오기
+  const PreviewComponent = componentMap[id];
 
   return (
     <div className="mx-auto flex w-full max-w-3xl min-w-0 flex-1 flex-col gap-8 px-4 py-6 text-foreground md:px-0 lg:py-8">
@@ -39,15 +57,22 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
       
       <div className="w-full flex-1">
         <div className="relative mt-4 mb-12 flex flex-col gap-2">
-          <div className="relative rounded-lg border">
-            <div className="flex min-h-[450px] w-full justify-center items-center p-10">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold mb-4">Component Preview</h2>
-                <p className="text-muted-foreground">
-                  This is the preview area for {id}
-                </p>
+          <div className="text-sm font-medium mb-2">Preview</div>
+          <div className="relative rounded-lg border overflow-hidden">
+            {PreviewComponent ? (
+              <div className="w-full">
+                <PreviewComponent />
               </div>
-            </div>
+            ) : (
+              <div className="flex min-h-[450px] w-full justify-center items-center p-10">
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold mb-4">Component Not Found</h2>
+                  <p className="text-muted-foreground">
+                    The component "{id}" is not available yet.
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
