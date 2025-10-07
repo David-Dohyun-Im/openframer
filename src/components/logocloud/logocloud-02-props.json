@@ -1,0 +1,20 @@
+{
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Join 500+ companies",
+    "description": "Subtitle above title"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Building the future together",
+    "description": "Main title"
+  },
+  "companies": {
+    "type": "array",
+    "required": true,
+    "items": { "type": "string" },
+    "description": "Array of company names"
+  }
+}

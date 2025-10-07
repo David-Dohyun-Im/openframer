@@ -1,0 +1,38 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Build amazing experiences with modern design",
+    "description": "Main heading text"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Create beautiful, responsive websites with our collection of carefully crafted components.",
+    "description": "Supporting text below the main heading"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get started" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Learn more" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Secondary call-to-action button"
+  },
+  "backgroundGradient": {
+    "type": "string",
+    "required": false,
+    "default": "from-slate-50 to-white",
+    "description": "Tailwind gradient classes for background"
+  }
+}

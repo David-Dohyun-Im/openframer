@@ -67,6 +67,16 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
     console.error('Meta file not found:', error);
   }
 
+  // Props data 가져오기
+  let propsData = null;
+  try {
+    const propsFilePath = path.join(process.cwd(), 'src', 'components', id.split('-')[0], `${id}-props.json`);
+    const propsFileContent = await fs.readFile(propsFilePath, 'utf-8');
+    propsData = JSON.parse(propsFileContent);
+  } catch (error) {
+    console.error('Props file not found:', error);
+  }
+
   return (
     <div className="mx-auto flex w-full max-w-6xl min-w-0 flex-1 flex-col gap-8 px-4 py-6 text-foreground md:px-8 lg:py-8">
       <div className="flex flex-col gap-2">
@@ -171,6 +181,61 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
         </div>
 
         <h2 className="font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight">
+          Props
+        </h2>
+        
+        {propsData ? (
+          <div className="my-6 w-full overflow-y-auto">
+            <table className="relative w-full overflow-hidden border-none text-sm">
+              <thead>
+                <tr className="last:border-b-none m-0 border-b">
+                  <th className="px-4 py-2 text-left font-bold">Prop</th>
+                  <th className="px-4 py-2 text-left font-bold">Type</th>
+                  <th className="px-4 py-2 text-left font-bold">Required</th>
+                  <th className="px-4 py-2 text-left font-bold">Default</th>
+                  <th className="px-4 py-2 text-left font-bold">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(propsData).map(([propName, propInfo]: [string, any]) => (
+                  <tr key={propName} className="last:border-b-none m-0 border-b">
+                    <td className="px-4 py-2 text-left">
+                      <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
+                        {propName}
+                      </code>
+                    </td>
+                    <td className="px-4 py-2 text-left">
+                      <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
+                        {propInfo.type}
+                      </code>
+                    </td>
+                    <td className="px-4 py-2 text-left">
+                      <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
+                        {propInfo.required ? 'Yes' : 'No'}
+                      </code>
+                    </td>
+                    <td className="px-4 py-2 text-left">
+                      <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
+                        {propInfo.default ? String(propInfo.default) : '-'}
+                      </code>
+                    </td>
+                    <td className="px-4 py-2 text-left">
+                      {propInfo.description || '-'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <div className="relative mt-4 rounded-lg border p-8">
+            <div className="text-center text-muted-foreground">
+              Props data not available
+            </div>
+          </div>
+        )}
+
+        <h2 className="font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight">
           Meta Data
         </h2>
         
@@ -180,45 +245,6 @@ export default async function ComponentPage({ params }: { params: Promise<{ id: 
               {metadata ? JSON.stringify(metadata, null, 2) : 'Meta data not available'}
             </code>
           </pre>
-        </div>
-
-        <h2 className="font-heading mt-8 scroll-m-28 text-xl font-medium tracking-tight">
-          Props
-        </h2>
-        
-        <div className="my-6 w-full overflow-y-auto">
-          <table className="relative w-full overflow-hidden border-none text-sm">
-            <thead>
-              <tr className="last:border-b-none m-0 border-b">
-                <th className="px-4 py-2 text-left font-bold">Prop</th>
-                <th className="px-4 py-2 text-left font-bold">Type</th>
-                <th className="px-4 py-2 text-left font-bold">Default</th>
-                <th className="px-4 py-2 text-left font-bold">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="last:border-b-none m-0 border-b">
-                <td className="px-4 py-2 text-left">
-                  <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
-                    children
-                  </code>
-                </td>
-                <td className="px-4 py-2 text-left">
-                  <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
-                    React.ReactNode
-                  </code>
-                </td>
-                <td className="px-4 py-2 text-left">
-                  <code className="bg-muted relative rounded-md px-2 py-1 font-mono text-xs">
-                    -
-                  </code>
-                </td>
-                <td className="px-4 py-2 text-left">
-                  The content to be displayed.
-                </td>
-              </tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </div>

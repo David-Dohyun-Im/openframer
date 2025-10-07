@@ -1,0 +1,21 @@
+{
+  "title": {
+    "type": "string",
+    "required": false,
+    "default": "Trusted by the world's most innovative teams",
+    "description": "Section title"
+  },
+  "logos": {
+    "type": "array",
+    "required": true,
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "src": { "type": "string" },
+        "alt": { "type": "string" }
+      }
+    },
+    "description": "Array of logo objects"
+  }
+}

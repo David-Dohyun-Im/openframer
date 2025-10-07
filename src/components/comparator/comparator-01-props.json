@@ -1,0 +1,13 @@
+{
+  "className": {
+    "type": "string",
+    "required": false,
+    "default": "",
+    "description": "Additional CSS classes"
+  },
+  "children": {
+    "type": "ReactNode",
+    "required": false,
+    "description": "Child components or content"
+  }
+}

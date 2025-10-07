@@ -1,0 +1,36 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Transform your ideas",
+    "description": "First part of the heading"
+  },
+  "highlightedTitle": {
+    "type": "string",
+    "required": false,
+    "default": "into reality",
+    "description": "Highlighted part of the heading with gradient"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "The fastest way to build modern web applications.",
+    "description": "Description text"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Start building" },
+      "href": { "type": "string", "default": "#" }
+    }
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "View demo" },
+      "href": { "type": "string", "default": "#" }
+    }
+  }
+}

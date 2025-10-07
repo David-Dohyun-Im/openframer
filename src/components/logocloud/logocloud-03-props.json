@@ -1,0 +1,31 @@
+{
+  "badge": {
+    "type": "string",
+    "required": false,
+    "default": "Our Partners",
+    "description": "Badge text"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Partnering with industry leaders",
+    "description": "Section title"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "We work with the best companies to deliver exceptional results",
+    "description": "Description text"
+  },
+  "partners": {
+    "type": "array",
+    "required": true,
+    "items": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "logo": { "type": "string" }
+      }
+    }
+  }
+}
