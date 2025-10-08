@@ -1,0 +1,45 @@
+{
+  "title": {
+    "type": "string",
+    "required": false,
+    "default": "Testimonials",
+    "description": "Main heading for the testimonials section"
+  },
+  "testimonials": {
+    "type": "array",
+    "required": true,
+    "default": [
+      {
+        "id": "1",
+        "name": "Shekinah Tshiokufila",
+        "role": "Software Engineer",
+        "content": "Tailus has transformed the way I develop web applications. Their extensive collection of UI components, blocks, and templates has significantly accelerated my workflow. The flexibility to customize every aspect allows me to create unique user experiences. Tailus is a game-changer for modern web development",
+        "avatar": "https://tailus.io/images/reviews/shekinah.webp",
+        "company": "Nike",
+        "companyLogo": "https://html.tailus.io/blocks/customers/nike.svg"
+      },
+      {
+        "id": "2",
+        "name": "Jonathan Yombo",
+        "role": "Software Engineer",
+        "content": "Tailus is really extraordinary and very practical, no need to break your head. A real gold mine.",
+        "avatar": "https://tailus.io/images/reviews/jonathan.webp"
+      },
+      {
+        "id": "3",
+        "name": "Yucel Faruksahan",
+        "role": "Creator, Tailkits",
+        "content": "Great work on tailfolio template. This is one of the best personal website that I have seen so far!",
+        "avatar": "https://tailus.io/images/reviews/yucel.webp"
+      },
+      {
+        "id": "4",
+        "name": "Rodrigo Aguilar",
+        "role": "Creator, TailwindAwesome",
+        "content": "Great work on tailfolio template. This is one of the best personal website that I have seen so far!",
+        "avatar": "https://tailus.io/images/reviews/rodrigo.webp"
+      }
+    ],
+    "description": "Array of testimonial objects with user details and content"
+  }
+}

@@ -1,13 +1,13 @@
 {
   "ratio": ["16:9", "21:9", "full-width", "auto"],
   "color": {
-    "primary": ["#0066FF", "#6366F1", "#8B5CF6", "#EC4899"],
-    "secondary": ["#64748B", "#94A3B8"],
+    "primary": ["#121212", "#000000", "#1F2937", "#374151"],
+    "secondary": ["#6D6D6D", "#9CA3AF"],
     "modes": {
       "light": {
         "background": "#FFFFFF",
-        "text": "#0F172A",
-        "accent": "#F1F5F9"
+        "text": "#121212",
+        "accent": "#F9FAFB"
       },
       "dark": {
         "background": "#0F172A",
@@ -17,24 +17,24 @@
     }
   },
   "font": {
-    "heading": ["GT Walsheim Bold", "Inter Bold", "System Bold"],
-    "subheading": ["GT Walsheim Medium", "Inter Medium"],
-    "body": ["GT Walsheim Regular", "Inter Regular"]
+    "heading": ["Inter Medium", "Inter Bold", "System Bold"],
+    "subheading": ["Inter Medium", "Inter Regular"],
+    "body": ["Inter Regular", "Inter Medium"]
   },
-  "motion": "Smooth entrance animations with subtle transitions. Hover states should be clear and inviting. Consider scroll-triggered animations for engagement.",
+  "motion": "Smooth entrance animations with staggered reveals. Image has hover scale effect and entrance animation with delay. All elements fade in with subtle timing differences.",
   "size": {
     "fontSize": {
-      "heading": { "min": "28px", "max": "72px" },
-      "subheading": { "min": "18px", "max": "24px" },
-      "body": { "min": "14px", "max": "18px" }
+      "heading": { "min": "48px", "max": "64px" },
+      "subheading": { "min": "16px", "max": "20px" },
+      "body": { "min": "16px", "max": "20px" }
     },
     "dimensions": {
-      "height": { "min": "400px", "max": "100vh" },
-      "contentWidth": { "min": "320px", "max": "1280px" }
+      "height": { "min": "800px", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1200px" }
     },
     "spacing": {
-      "padding": { "min": "24px", "max": "96px" },
-      "gap": { "min": "16px", "max": "48px" }
+      "padding": { "min": "32px", "max": "128px" },
+      "gap": { "min": "24px", "max": "64px" }
     }
   }
 }

@@ -1,0 +1,38 @@
+{
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "The road to freedom starts from here",
+    "description": "Subtitle text above the typewriter effect"
+  },
+  "words": {
+    "type": "array",
+    "required": true,
+    "default": [
+      { "text": "Build" },
+      { "text": "awesome" },
+      { "text": "apps" },
+      { "text": "with" },
+      { "text": "Aceternity.", "className": "text-blue-500 dark:text-blue-500" }
+    ],
+    "description": "Array of words for the typewriter effect"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Join now" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Signup" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Secondary call-to-action button"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#000000", "#1F2937", "#374151"],
+    "secondary": ["#6B7280", "#9CA3AF"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#000000",
+        "accent": "#F3F4F6"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#1E293B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Arial Rounded MT Regular", "Inter Medium", "System Medium"],
+    "subheading": ["Inter Regular", "Inter Medium"],
+    "body": ["Inter Regular", "Inter Medium"]
+  },
+  "motion": "Staggered entrance animations with blur effect. Main testimonial has larger layout spanning multiple grid cells. Cards have smooth transitions and hover effects.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "48px", "max": "64px" },
+      "subheading": { "min": "14px", "max": "18px" },
+      "body": { "min": "14px", "max": "24px" }
+    },
+    "dimensions": {
+      "height": { "min": "600px", "max": "auto" },
+      "contentWidth": { "min": "320px", "max": "1280px" }
+    },
+    "spacing": {
+      "padding": { "min": "32px", "max": "80px" },
+      "gap": { "min": "16px", "max": "32px" }
+    }
+  }
+}

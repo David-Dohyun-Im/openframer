@@ -1,0 +1,23 @@
+{
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Creative · Digital Design",
+    "description": "Category subtitle with bullet separator"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Discover the power of modern design, a comprehensive template. Let's create your brand into something extraordinary together.",
+    "description": "Main heading with mixed color text (black and gray)"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get Started" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  }
+}

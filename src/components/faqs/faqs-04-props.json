@@ -1,0 +1,51 @@
+{
+  "title": {
+    "type": "string",
+    "required": false,
+    "default": "Frequently Asked Questions",
+    "description": "Main heading for the FAQ section"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "Find answers to common questions about our services",
+    "description": "Description text below the heading"
+  },
+  "items": {
+    "type": "array",
+    "required": true,
+    "default": [
+      {
+        "question": "How do I get started?",
+        "answer": "Getting started is easy! Simply sign up for an account and follow our quick setup guide. We'll walk you through each step of the process.",
+        "category": "Getting Started"
+      },
+      {
+        "question": "What payment methods do you accept?",
+        "answer": "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely through our payment partners.",
+        "category": "Billing"
+      },
+      {
+        "question": "Is there a free trial available?",
+        "answer": "Yes! We offer a 14-day free trial with full access to all features. No credit card required to start your trial.",
+        "category": "Pricing"
+      },
+      {
+        "question": "How can I contact support?",
+        "answer": "Our support team is available 24/7 through our help center, email support, or live chat. We typically respond within 2 hours.",
+        "category": "Support"
+      }
+    ],
+    "description": "Array of FAQ items with question, answer, and optional category"
+  },
+  "contactInfo": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "title": { "type": "string", "default": "Still have questions?" },
+      "description": { "type": "string", "default": "Contact our support team" },
+      "buttonText": { "type": "string", "default": "Contact Support" }
+    },
+    "description": "Optional contact section at the bottom"
+  }
+}

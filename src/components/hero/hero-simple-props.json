@@ -1,0 +1,35 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Modern App Your Digital Hub",
+    "description": "Main heading with line break after second word"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Modern App is an all-in-one productivity system that centralizes tasks, projects, notes, resources, and everything in between.",
+    "description": "Supporting description text"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get Started" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  },
+  "screenshot": {
+    "type": "string",
+    "required": false,
+    "default": "https://framerusercontent.com/images/vrfEi2EEdCjeaPndjlriPJlIKI.png",
+    "description": "Screenshot image URL for product showcase"
+  },
+  "screenshotAlt": {
+    "type": "string",
+    "required": false,
+    "default": "Modern App Screenshot",
+    "description": "Alt text for the screenshot image"
+  }
+}

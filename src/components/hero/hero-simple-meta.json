@@ -1,0 +1,40 @@
+{
+  "ratio": ["full-width", "auto"],
+  "color": {
+    "primary": ["#121212", "#FFFFFF", "#6D6D6D"],
+    "secondary": ["#F3F4F6", "#E5E7EB"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#121212",
+        "accent": "#F3F4F6"
+      },
+      "dark": {
+        "background": "#FFFFFF",
+        "text": "#121212",
+        "accent": "#F3F4F6"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Inter", "System Bold"],
+    "subheading": ["Inter Medium"],
+    "body": ["Inter Regular"]
+  },
+  "motion": "Clean, minimal SaaS design with large screenshot showcase. Subtle entrance animations with staggered timing. Hover effects on interactive elements. Professional, modern aesthetic.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "40px", "max": "56px" },
+      "subheading": { "min": "16px", "max": "18px" },
+      "body": { "min": "14px", "max": "18px" }
+    },
+    "dimensions": {
+      "height": { "min": "800px", "max": "1200px" },
+      "contentWidth": { "min": "320px", "max": "950px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "128px" },
+      "gap": { "min": "16px", "max": "250px" }
+    }
+  }
+}

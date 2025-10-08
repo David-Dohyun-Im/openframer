@@ -1,0 +1,40 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#000000", "#1F2937", "#374151"],
+    "secondary": ["#6B7280", "#9CA3AF"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#000000",
+        "accent": "#F3F4F6"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#1E293B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Arial Rounded MT Regular", "Satoshi Extralight", "System Light"],
+    "subheading": ["Inter Regular", "Inter Medium"],
+    "body": ["Inter Regular", "Inter Medium"]
+  },
+  "motion": "Staggered card entrance animations with smooth transitions. Popular plan has scale effect. Cards have backdrop blur and glassmorphism effects. Background has animated gradient.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "48px", "max": "64px" },
+      "subheading": { "min": "14px", "max": "18px" },
+      "body": { "min": "14px", "max": "18px" }
+    },
+    "dimensions": {
+      "height": { "min": "600px", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1200px" }
+    },
+    "spacing": {
+      "padding": { "min": "32px", "max": "64px" },
+      "gap": { "min": "24px", "max": "48px" }
+    }
+  }
+}

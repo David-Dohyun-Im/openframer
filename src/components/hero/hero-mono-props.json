@@ -1,0 +1,44 @@
+{
+  "badge": {
+    "type": "string",
+    "required": false,
+    "default": "PREMIUM DESIGN SOLUTIONS",
+    "description": "Top badge text with design icon"
+  },
+  "logo": {
+    "type": "string",
+    "required": false,
+    "default": "https://framerusercontent.com/images/6ZRrNs4Gy2rcMzXTLB8Tl2NZ51I.svg?width=64&height=64",
+    "description": "Logo image URL for the design"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "DESIGN",
+    "description": "Main company name with gradient text effect"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Professional design solutions, crafted for modern businesses",
+    "description": "Supporting tagline text"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get Started" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button with arrow icon"
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Learn More" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Secondary call-to-action button"
+  }
+}

@@ -5,6 +5,13 @@ const componentMap: Record<string, any> = {
   'hero-01': dynamic(() => import('@/components/hero/hero-01')),
   'hero-02': dynamic(() => import('@/components/hero/hero-02')),
   'hero-03': dynamic(() => import('@/components/hero/hero-03')),
+  'hero-04': dynamic(() => import('@/components/hero/hero-04')),
+  'hero-dark': dynamic(() => import('@/components/hero/hero-dark')),
+  'hero-vision': dynamic(() => import('@/components/hero/hero-vision')),
+  'hero-mood': dynamic(() => import('@/components/hero/hero-mood')),
+  'hero-mono': dynamic(() => import('@/components/hero/hero-mono')),
+  'hero-simple': dynamic(() => import('@/components/hero/hero-simple')),
+  'hero-text': dynamic(() => import('@/components/hero/hero-text')),
   'logocloud-01': dynamic(() => import('@/components/logocloud/logocloud-01')),
   'logocloud-02': dynamic(() => import('@/components/logocloud/logocloud-02')),
   'logocloud-03': dynamic(() => import('@/components/logocloud/logocloud-03')),
@@ -26,21 +33,26 @@ const componentMap: Record<string, any> = {
   'testimonials-01': dynamic(() => import('@/components/testimonials/testimonials-01')),
   'testimonials-02': dynamic(() => import('@/components/testimonials/testimonials-02')),
   'testimonials-03': dynamic(() => import('@/components/testimonials/testimonials-03')),
+  'testimonials-04': dynamic(() => import('@/components/testimonials/testimonials-04')),
   'cta-01': dynamic(() => import('@/components/cta/cta-01')),
   'cta-02': dynamic(() => import('@/components/cta/cta-02')),
   'cta-03': dynamic(() => import('@/components/cta/cta-03')),
+  'cta-04': dynamic(() => import('@/components/cta/cta-04')),
+  'cta-05': dynamic(() => import('@/components/cta/cta-05')),
   'footer-01': dynamic(() => import('@/components/footer/footer-01')),
   'footer-02': dynamic(() => import('@/components/footer/footer-02')),
   'footer-03': dynamic(() => import('@/components/footer/footer-03')),
   'pricing-01': dynamic(() => import('@/components/pricing/pricing-01')),
   'pricing-02': dynamic(() => import('@/components/pricing/pricing-02')),
   'pricing-03': dynamic(() => import('@/components/pricing/pricing-03')),
+  'pricing-04': dynamic(() => import('@/components/pricing/pricing-04')),
   'comparator-01': dynamic(() => import('@/components/comparator/comparator-01')),
   'comparator-02': dynamic(() => import('@/components/comparator/comparator-02')),
   'comparator-03': dynamic(() => import('@/components/comparator/comparator-03')),
   'faqs-01': dynamic(() => import('@/components/faqs/faqs-01')),
   'faqs-02': dynamic(() => import('@/components/faqs/faqs-02')),
   'faqs-03': dynamic(() => import('@/components/faqs/faqs-03')),
+  'faqs-04': dynamic(() => import('@/components/faqs/faqs-04')),
   'login-01': dynamic(() => import('@/components/login/login-01')),
   'login-02': dynamic(() => import('@/components/login/login-02')),
   'login-03': dynamic(() => import('@/components/login/login-03')),
@@ -72,7 +84,9 @@ export default async function PreviewPage({ params }: { params: Promise<{ id: st
 
   return (
     <div className="min-h-screen w-full">
-      <PreviewComponent />
+      <div className="min-h-[600px]">
+        <PreviewComponent />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,45 @@
+{
+  "badge": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "New" },
+      "label": { "type": "string", "default": "Just launched v2.0" }
+    },
+    "description": "Badge shown above the title"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "The future of web development is here",
+    "description": "Main heading text"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "Experience the next generation of component libraries.",
+    "description": "Supporting text"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get started for free" },
+      "href": { "type": "string", "default": "#" }
+    }
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "View documentation" },
+      "href": { "type": "string", "default": "#" }
+    }
+  },
+  "showPreview": {
+    "type": "boolean",
+    "required": false,
+    "default": true,
+    "description": "Whether to show the preview card on the right"
+  }
+}

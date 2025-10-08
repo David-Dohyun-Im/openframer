@@ -1,0 +1,40 @@
+{
+  "ratio": ["full-width", "auto"],
+  "color": {
+    "primary": ["#000000", "#FFFFFF", "#F5F5F5"],
+    "secondary": ["#808080", "#A0A0A0"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#000000",
+        "accent": "#F5F5F5"
+      },
+      "dark": {
+        "background": "#FFFFFF",
+        "text": "#000000",
+        "accent": "#F5F5F5"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Inter", "Satoshi"],
+    "subheading": ["Inter Medium"],
+    "body": ["Inter Regular"]
+  },
+  "motion": "Clean, professional AI company aesthetic with sophisticated gradient logo design. Smooth entrance animations with subtle hover effects. Modern button interactions with shadow depth.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "64px", "max": "100px" },
+      "subheading": { "min": "14px", "max": "16px" },
+      "body": { "min": "12px", "max": "14px" }
+    },
+    "dimensions": {
+      "height": { "min": "100vh", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "1024px" }
+    },
+    "spacing": {
+      "padding": { "min": "16px", "max": "24px" },
+      "gap": { "min": "16px", "max": "24px" }
+    }
+  }
+}

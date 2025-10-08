@@ -1,0 +1,40 @@
+{
+  "ratio": ["full-width", "auto"],
+  "color": {
+    "primary": ["#F59E0B", "#F97316", "#EA580C"],
+    "secondary": ["#FFFFFF", "#FEF3C7", "#FDE68A"],
+    "modes": {
+      "light": {
+        "background": "#FEF3C7",
+        "text": "#FFFFFF",
+        "accent": "#F59E0B"
+      },
+      "dark": {
+        "background": "#FEF3C7",
+        "text": "#FFFFFF",
+        "accent": "#F59E0B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Arial Rounded MT Regular", "Playfair Display Italic", "Inter"],
+    "subheading": ["Arial Rounded MT Regular", "Inter Medium"],
+    "body": ["Arial Rounded MT Regular", "Inter Regular"]
+  },
+  "motion": "Warm, moody atmosphere with sepia-toned background. Multiple font families creating typographic hierarchy. Staggered entrance animations with organic timing. Interactive buttons with hover states.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "48px", "max": "68px" },
+      "subheading": { "min": "40px", "max": "60px" },
+      "body": { "min": "16px", "max": "18px" }
+    },
+    "dimensions": {
+      "height": { "min": "100vh", "max": "100vh" },
+      "contentWidth": { "min": "320px", "max": "720px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "48px" },
+      "gap": { "min": "16px", "max": "32px" }
+    }
+  }
+}

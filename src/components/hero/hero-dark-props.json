@@ -1,0 +1,38 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "The AI layer that brings clarity to complexity.",
+    "description": "Main heading text with emphasis on 'clarity'"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Our platform integrates seamlessly into your stack to deliver real-time understanding, not just predictions.",
+    "description": "Supporting text below the main heading"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Get started" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  },
+  "secondaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Learn more" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Secondary call-to-action button with glassmorphism style"
+  },
+  "announcement": {
+    "type": "string",
+    "required": false,
+    "default": "Announcing API 2.0",
+    "description": "Announcement banner text at the top"
+  }
+}

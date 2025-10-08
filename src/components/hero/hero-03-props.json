@@ -1,45 +1,41 @@
 {
-  "badge": {
-    "type": "object",
-    "required": false,
-    "properties": {
-      "text": { "type": "string", "default": "New" },
-      "label": { "type": "string", "default": "Just launched v2.0" }
-    },
-    "description": "Badge shown above the title"
-  },
   "title": {
     "type": "string",
     "required": true,
-    "default": "The future of web development is here",
-    "description": "Main heading text"
+    "default": "Fragment OS",
+    "description": "Main title text"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Your Second Brain",
+    "description": "Subtitle text displayed below main title"
   },
   "description": {
     "type": "string",
     "required": false,
-    "default": "Experience the next generation of component libraries.",
-    "description": "Supporting text"
+    "default": "Fragment OS is an all-in-one Notion system that centralizes tasks, projects, notes, resources, and everything in between.",
+    "description": "Description text below the title"
   },
   "primaryButton": {
     "type": "object",
     "required": false,
     "properties": {
-      "text": { "type": "string", "default": "Get started for free" },
+      "text": { "type": "string", "default": "Get Started" },
       "href": { "type": "string", "default": "#" }
-    }
+    },
+    "description": "Primary call-to-action button"
   },
-  "secondaryButton": {
-    "type": "object",
+  "imageUrl": {
+    "type": "string",
     "required": false,
-    "properties": {
-      "text": { "type": "string", "default": "View documentation" },
-      "href": { "type": "string", "default": "#" }
-    }
+    "default": "https://framerusercontent.com/images/vrfEi2EEdCjeaPndjlriPJlIKI.png",
+    "description": "URL of the hero image"
   },
-  "showPreview": {
-    "type": "boolean",
+  "imageAlt": {
+    "type": "string",
     "required": false,
-    "default": true,
-    "description": "Whether to show the preview card on the right"
+    "default": "Fragment OS Screenshot",
+    "description": "Alt text for the hero image"
   }
 }

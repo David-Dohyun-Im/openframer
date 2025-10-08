@@ -1,0 +1,40 @@
+{
+  "ratio": ["16:9", "21:9", "full-width", "auto"],
+  "color": {
+    "primary": ["#3B82F6", "#1D4ED8", "#1E40AF"],
+    "secondary": ["#6B7280", "#9CA3AF"],
+    "modes": {
+      "light": {
+        "background": "#FFFFFF",
+        "text": "#121212",
+        "accent": "#F3F4F6"
+      },
+      "dark": {
+        "background": "#0F172A",
+        "text": "#F8FAFC",
+        "accent": "#1E293B"
+      }
+    }
+  },
+  "font": {
+    "heading": ["Inter Normal", "Satoshi Medium", "System Medium"],
+    "subheading": ["Inter Regular", "Inter Medium"],
+    "body": ["Inter Regular", "Inter Medium"]
+  },
+  "motion": "Smooth accordion animations with staggered entrance effects. Items animate in sequence with subtle delays. Expand/collapse uses height and opacity transitions with custom easing.",
+  "size": {
+    "fontSize": {
+      "heading": { "min": "32px", "max": "48px" },
+      "subheading": { "min": "16px", "max": "20px" },
+      "body": { "min": "14px", "max": "18px" }
+    },
+    "dimensions": {
+      "height": { "min": "400px", "max": "auto" },
+      "contentWidth": { "min": "320px", "max": "768px" }
+    },
+    "spacing": {
+      "padding": { "min": "24px", "max": "64px" },
+      "gap": { "min": "16px", "max": "32px" }
+    }
+  }
+}

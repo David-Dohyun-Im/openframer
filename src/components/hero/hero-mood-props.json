@@ -1,0 +1,47 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Meet YourAI.",
+    "description": "Main heading with rounded, friendly typography"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Reimagine work with adaptive thinking",
+    "description": "Subtitle with mixed font families for emphasis"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Start free decoration" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "It helps you explore, create, and refine ideas through natural interactions. From drafting concepts and options to shaping workflows and outputs, it adapts to your style.",
+    "description": "Description text in bottom left corner"
+  },
+  "solutionsButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Solutions for complex tasks" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Solutions button in bottom right"
+  },
+  "adaptiveButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Conversational & Adaptive" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Adaptive button in bottom right"
+  }
+}

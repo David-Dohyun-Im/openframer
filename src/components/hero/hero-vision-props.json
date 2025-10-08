@@ -1,0 +1,23 @@
+{
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Creative Vision",
+    "description": "Main heading text with large, bold typography"
+  },
+  "subtitle": {
+    "type": "string",
+    "required": false,
+    "default": "Where ideas come to life and innovation flows like liquid creativity through endless possibilities.",
+    "description": "Supporting text with creative, inspiring language"
+  },
+  "primaryButton": {
+    "type": "object",
+    "required": false,
+    "properties": {
+      "text": { "type": "string", "default": "Explore Now" },
+      "href": { "type": "string", "default": "#" }
+    },
+    "description": "Primary call-to-action button with glassmorphism style"
+  }
+}

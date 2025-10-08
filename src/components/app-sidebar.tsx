@@ -36,7 +36,7 @@ const sections = [
   {
     title: "Hero Section",
     icon: Sparkles,
-    items: ["hero-01", "hero-02", "hero-03"],
+    items: ["hero-01", "hero-02", "hero-03", "hero-04", "hero-dark", "hero-vision", "hero-mood", "hero-mono", "hero-simple", "hero-text"],
   },
   {
     title: "Logo Cloud",
@@ -71,12 +71,12 @@ const sections = [
   {
     title: "Testimonials",
     icon: MessageSquare,
-    items: ["testimonials-01", "testimonials-02", "testimonials-03"],
+    items: ["testimonials-01", "testimonials-02", "testimonials-03", "testimonials-04"],
   },
   {
     title: "Call to Action",
     icon: Megaphone,
-    items: ["cta-01", "cta-02", "cta-03"],
+    items: ["cta-01", "cta-02", "cta-03", "cta-04", "cta-05"],
   },
   {
     title: "Footer",
@@ -86,7 +86,7 @@ const sections = [
   {
     title: "Pricing",
     icon: DollarSign,
-    items: ["pricing-01", "pricing-02", "pricing-03"],
+    items: ["pricing-01", "pricing-02", "pricing-03", "pricing-04"],
   },
   {
     title: "Comparator",
@@ -96,7 +96,7 @@ const sections = [
   {
     title: "FAQs",
     icon: HelpCircle,
-    items: ["faqs-01", "faqs-02", "faqs-03"],
+    items: ["faqs-01", "faqs-02", "faqs-03", "faqs-04"],
   },
   {
     title: "Login",

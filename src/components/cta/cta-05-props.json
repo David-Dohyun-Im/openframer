@@ -1,0 +1,32 @@
+{
+  "category": {
+    "type": "string",
+    "required": false,
+    "default": "Our Story",
+    "description": "Category label above the main content"
+  },
+  "title": {
+    "type": "string",
+    "required": true,
+    "default": "Explore our journey and learn what sets us apart in",
+    "description": "Main title text"
+  },
+  "description": {
+    "type": "string",
+    "required": false,
+    "default": "crafting impactful digital experiences.",
+    "description": "Description text in gray color"
+  },
+  "buttonText": {
+    "type": "string",
+    "required": false,
+    "default": "About Us",
+    "description": "Text for the call-to-action button"
+  },
+  "buttonHref": {
+    "type": "string",
+    "required": false,
+    "default": "#about",
+    "description": "Link URL for the button"
+  }
+}
